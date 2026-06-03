@@ -19,13 +19,17 @@ import ssl
 from email.message import EmailMessage
 
 # --- YOLOv8 INTEGRATION ---
-try:
-    from ultralytics import YOLO
-    vision_model = YOLO('yolov8n.pt') 
-    print("✅ YOLOv8 Vision Model Loaded Successfully")
-except ImportError:
-    print("⚠️ YOLO not installed. Run: pip install ultralytics")
-    vision_model = None
+vision_model = None
+if os.getenv("RENDER"):
+    print("ℹ️ Running on Render: Bypassing YOLOv8/PyTorch loading to save memory.")
+else:
+    try:
+        from ultralytics import YOLO
+        vision_model = YOLO('yolov8n.pt') 
+        print("✅ YOLOv8 Vision Model Loaded Successfully")
+    except ImportError:
+        print("⚠️ YOLO not installed. Run: pip install ultralytics")
+
 
 # --- CONFIGURATION & ENV ---
 load_dotenv()
