@@ -47,12 +47,13 @@ A next-generation empathetic therapist powered by a **Multi-Model Pipeline**:
 
 ```mermaid
 graph TD
-    A[React Frontend] -->|axios| B(FastAPI Gateway)
-    B -->|google-generativeai| C[Gemini 2.5 Flash]
-    B -->|ultralytics| D[YOLOv8 Face ROI Lock]
-    B -->|SQLAlchemy| E[(SQLite Database)]
-    A -->|OAuth 2.0| F[Google Authentication]
+    A["React Frontend"] -->|"axios"| B("FastAPI Gateway")
+    B -->|"google-generativeai"| C["Gemini 2.5 Flash"]
+    B -->|"ultralytics"| D["YOLOv8 Face ROI Lock"]
+    B -->|"SQLAlchemy"| E[("SQLite Database")]
+    A -->|"OAuth 2.0"| F["Google Authentication"]
 ```
+
 
 * **Frontend:** React.js, Tailwind CSS/Glassmorphism, SVG Visualizations, Lucide React, Axios.
 * **Backend:** Python FastAPI, SQLite, SQLAlchemy ORM, Uvicorn.
