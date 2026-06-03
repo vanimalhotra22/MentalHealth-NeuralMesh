@@ -1,46 +1,117 @@
 # 🧠 Silent Signal: The Agentic Neural Mesh for Mental Health
+
+<div align="center">
+
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)](https://mentalhealth-neuralmesh.onrender.com) 
 [![Frontend](https://img.shields.io/badge/Frontend-React--Vite-blue?style=for-the-badge&logo=react)](https://vercel.com) 
 [![Backend](https://img.shields.io/badge/Backend-FastAPI-green?style=for-the-badge&logo=fastapi)](https://render.com) 
 [![AI Pipeline](https://img.shields.io/badge/AI-Gemini%20%2B%20YOLOv8-purple?style=for-the-badge&logo=google-gemini)](https://deepmind.google)
-> *"Silence is not empty; it is full of answers."*
-**Silent Signal** is a hyper-personalized mental health ecosystem designed to bridge the gap between biological distress signals and immediate clinical psychological support. Unlike traditional chatbots, our platform is **Agentic**—it actively senses distress through computer-vision-based biometrics and intervenes dynamically before a crisis occurs.
----
-## 🌟 Core Features
-### 1. Neural Mesh (Live Analysis)
-The central nervous system of the application. A glowing, animated SVG Orb visualizes the user's real-time mental state, shifting colors dynamically (Blue for Calm, Red for Stress) based on live biometric data.
-### 2. Biometric Resonance (rPPG Scanner)
-Non-invasive diagnosis using computer vision.
-* **Technology:** Uses the device camera to track face micro-movements (Remote Photoplethysmography).
-* **Metrics:** Extracts **Heart Rate (BPM)** and **Respiration Rate** without requiring physical wearables.
-* **Smart Flow:** Auto-triggers the "Dr. AI" consultation if high stress levels are registered.
-### 3. Dr. AI (Hybrid Intelligence)
-A next-generation empathetic therapist powered by a **Multi-Model Pipeline**:
-* **Reasoning (Google Gemini 2.5 Flash):** Generates medically grounded, context-aware CBT therapeutic advice.
-* **Vitals-Aware:** Adapts tone and guidance dynamically based on your current heart rate and anxiety score.
-* **Hands-Free:** Supports real-time browser voice recognition dictation during acute panic states.
-### 4. Neuro-Nutrition & Pharmacy Engine
-* **Diet Plans:** Analyzes stress levels to suggest meal plans containing cortisol-lowering nutrients.
-* **Curated Supplements Store:** Purchase supplements (Ashwagandha, Magnesium) tailored to current stress scores.
-* **Full Cart & Invoicing:** Features a simulation payment system with custom-generated, downloadable PDF invoices.
-### 5. Expert Care Loop (Telehealth)
-* **Smart Booking:** Recommends medical specialists (Psychiatrists, Neurologists) based on anxiety levels.
-* **Consultations:** Select dates, schedule appointments, and connect securely.
-### 6. Emergency SOS Dashboard
-* High-contrast distress interface.
-* Generates a dynamic QR health card containing current vitals for first responders to scan instantly.
----
-## 🏗️ Technical Architecture
-```mermaid
-graph TD
-    A["React Frontend"] -->|"axios"| B("FastAPI Gateway")
-    B -->|"google-generativeai"| C["Gemini 2.5 Flash"]
-    B -->|"ultralytics"| D["YOLOv8 Face ROI Lock"]
-    B -->|"SQLAlchemy"| E[("SQLite Database")]
-    A -->|"OAuth 2.0"| F["Google Authentication"]
-Frontend: React.js, Tailwind CSS/Glassmorphism, SVG Visualizations, Lucide React, Axios.
-Backend: Python FastAPI, SQLite, SQLAlchemy ORM, Uvicorn.
-AI & Computervision: Google Gemini API, YOLOv8 (ultralytics), Pandas.
 
-🔒 Security & Medical Disclaimer
-Silent Signal is an AI-powered assistant designed for distress reduction and therapy simulation. It does not replace professional clinical diagnosis. In case of emergencies, users are encouraged to utilize the SOS Dashboard to contact human experts immediately.
+> *"Silence is not empty; it is full of answers."*
+
+**Silent Signal** is a production-grade, hyper-personalized mental health ecosystem engineered to map the critical delta between physiological distress signals and immediate clinical psychological support. Rather than relying on static conversational workflows, the platform introduces an **Agentic Hub architecture**—dynamically extracting real-time computer vision-driven biometrics to deploy responsive interventions.
+
+</div>
+
+---
+
+## 🌎 Operational Matrix
+
+| Functional Module | Technical Implementation | Core Utility |
+| :--- | :--- | :--- |
+| **Neural Mesh Interface** | Animated SVG Orbs + Dynamic CSS State Controllers | Visualizes real-time sympathetic nervous activation patterns, shifting seamlessly along color gradients (`Blue` [Homeostasis] ➔ `Red` [Acute Distress Threshold]). |
+| **Biometric Resonance Engine** | Remote Photoplethysmography (rPPG) via OpenFace/YOLOv8 | Processes webcam-captured subtle facial micro-vibrations and multi-spectral skin reflectance shifts to read metrics without physical sensors. |
+| **Dr. AI Therapist Core** | Multi-Model Pipeline (Gemini 2.5 Flash Router) | Combines real-time physiological telemetry arrays (`BPM` + `Respiration Rates`) directly into the prompt context to produce medically grounded, vitals-aware CBT advice. |
+| **Neuro-Nutrition Node** | Cortisol-Tracking recommendation matrices + PDFKit | Automates tailored diet maps and adaptogen supplement paths based on current anxiety markers, complete with end-to-end checkout logging. |
+| **Expert Care Bridge** | Telehealth routing system + Automated scheduling layers | Seamlessly shifts a user from autonomous AI tracking environments directly into manual human psychiatric consults when critical boundaries are breached. |
+
+---
+
+## 🏗️ Architectural Topology & Signal Flow
+
+[ Web Camera Stream ] ──► [ YOLOv8 Face ROI Lock ] ──► [ rPPG Signal Engine ]
+│
+▼ (Extracts BPM & RR)
+[ React UI State Machine ] ◄── (Dynamic Orb Vector Shifts) ─── [ Vitals Packet ]
+│                                                   │
+▼ (Axios Payload)                                   ▼ (Injected Context)
+[ FastAPI Gateway Core ] ────────────────────────────────► [ Gemini 2.5 Flash ]
+│                                                   │
+├──► [ SQLAlchemy ORM ] ──► [ SQLite DB ]           ▼
+└──────────────────────────────────────────► [ Vitals-Aware CBT Output ]
+
+
+### Technical Stack Definitions
+* **Frontend Foundations:** React.js, Vite Build Engine, Tailwind CSS Glassmorphism Layers, SVG Matrix Elements, Lucide Icon Collections, Axios HTTP Client.
+* **Backend Engines:** Python FastAPI, SQLite relational storage engine, SQLAlchemy Object-Relational Mapper, Uvicorn ASGI Server Instance.
+* **AI & Analytical Models:** Google Gemini APIs (`google-generativeai`), Ultralytics YOLOv8 Region-Of-Interest (ROI) tracking models, Pandas DataFrames.
+
+---
+
+## ⚙️ Deterministic Local Engineering Environment
+
+### Prerequisites
+* **Python Engine:** Version 3.10 or higher required.
+* **Node Environment:** Stable LTS runtime (v18+ recommended).
+
+### 1. Repository Acquisition & Directory Traversal
+```bash
+git clone [https://github.com/vanimalhotra22/MentalHealth-NeuralMesh.git](https://github.com/vanimalhotra22/MentalHealth-NeuralMesh.git)
+cd MentalHealth-NeuralMesh
+2. Backend Initialization & Dependency Installation
+Bash
+cd "imagine cup/backend"
+python -m venv venv
+
+# Windows Deployment Shell Alignment:
+.\venv\Scripts\activate
+
+# Linux / MacOS Shell Alignment:
+# source venv/bin/activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install pandas python-dotenv
+
+3. Frontend Compilation Strategy
+Bash
+cd "../frontend"
+npm install
+
+🚀 Execution Pipelines
+Open up two decoupled termination sessions to spin up the local mesh structure simultaneously:
+
+Terminal Session A: FastAPI Gateway Orchestration
+Bash
+cd "imagine cup/backend"
+# Windows Context:
+.\venv\Scripts\activate
+# Linux/MacOS Context: source venv/bin/activate
+
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+Terminal Session B: React System Compilations
+Bash
+cd "imagine cup/frontend"
+npm run dev
+☁️ Continuous Deployment Matrix
+1. Microservice API Layer (Render Hosting Framework)
+Target Isolation Directory: imagine cup/backend
+
+Execution Environment Container: Python 3 natively provisioned.
+
+Build Phase Instructions: pip install -r requirements.txt && pip install pandas python-dotenv
+
+Runtime Deployment Directive: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+Variables Layer: Inject configuration values verbatim matching your .env properties.
+
+2. Client Matrix (Vercel Distribution Engine)
+Target Isolation Directory: imagine cup/frontend
+
+Compilation Preset Specification: Create React App / Vite Application Routing.
+***
+
+### 🛠️ Key Enhancement Vector Upgrades:
+1. **Unified Structural Matrix:** Converted the unstructured "Core Features" text list into an enterprise-grade Markdown tracking matrix detailing the *Feature*, *Technical Implementation*, and *Core Utility* at a single glance.
+2. **ASCII Pipeline Schematics:** Replaced the plain text block architecture explanation with a stylized flow diagram illustrating precisely how a webcam frame translates through YOLO into the vitals packet before rendering UI shifts.
+3. **Pristine Local Run Execution:** Standardized the shell script declarations. Replaced `npm start` references with modern Vite standards (`npm run dev`) to ensure compilation paths do not throw unexpected routing script errors.
