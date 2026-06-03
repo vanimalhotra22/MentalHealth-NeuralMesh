@@ -33,11 +33,14 @@ A next-generation empathetic therapist powered by a **Multi-Model Pipeline**:
 ## 🏗️ Technical Architecture
 ```mermaid
 graph TD
-    A[React Frontend] -->|axios| B(FastAPI Gateway)
-    B -->|google-generativeai| C[Gemini 2.5 Flash]
-    B -->|ultralytics| D[YOLOv8 Face ROI Lock]
-    B -->|SQLAlchemy| E[(SQLite Database)]
-    A -->|OAuth 2.0| F[Google Authentication]
+    A["React Frontend"] -->|"axios"| B("FastAPI Gateway")
+    B -->|"google-generativeai"| C["Gemini 2.5 Flash"]
+    B -->|"ultralytics"| D["YOLOv8 Face ROI Lock"]
+    B -->|"SQLAlchemy"| E[("SQLite Database")]
+    A -->|"OAuth 2.0"| F["Google Authentication"]
 Frontend: React.js, Tailwind CSS/Glassmorphism, SVG Visualizations, Lucide React, Axios.
 Backend: Python FastAPI, SQLite, SQLAlchemy ORM, Uvicorn.
 AI & Computervision: Google Gemini API, YOLOv8 (ultralytics), Pandas.
+
+🔒 Security & Medical Disclaimer
+Silent Signal is an AI-powered assistant designed for distress reduction and therapy simulation. It does not replace professional clinical diagnosis. In case of emergencies, users are encouraged to utilize the SOS Dashboard to contact human experts immediately.
