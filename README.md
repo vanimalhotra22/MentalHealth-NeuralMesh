@@ -1,4 +1,4 @@
-# 🧠 Silent Signal: The Agentic Neural Mesh for Mental Health
+# 🧠 Silent Signal: The Agentic Neural Mesh for Mental 
 
 <div align="center">
 
